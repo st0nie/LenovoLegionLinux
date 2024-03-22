@@ -82,4 +82,9 @@ if [[ $CPU_Control -eq 1 ]]; then
     $CPU_CONTROL_COMMAD
 fi
 
+if [[ $1 == cpu_only ]]; then
+        echo "Set CPU only"
+        exit
+fi
+
 legion_cli fancurve-write-preset-to-hw $FANCURVE_FILE
